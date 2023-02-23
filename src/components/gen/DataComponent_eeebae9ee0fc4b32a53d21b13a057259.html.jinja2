@@ -1,0 +1,9 @@
+{% import 'src/components/vo/IterativeContainer.html.jinja2' as IterativeContainer %}
+{% import 'src/components/gen/Project.html.jinja2' as Project %}
+
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#hasProject' -%}
+    {% call(slotObj) IterativeContainer.component(graph, depth, object, predicate) %}
+        {{ Project.component(graph, depth, slotObj) }}
+    {% endcall %}
+{%- endmacro -%}

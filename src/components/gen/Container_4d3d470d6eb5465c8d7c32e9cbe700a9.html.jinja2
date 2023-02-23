@@ -1,0 +1,11 @@
+{% import 'src/components/gen/Strong_74b4557f61744f8a994679ebf56ca07b.html.jinja2' as Strong_74b4557f61744f8a994679ebf56ca07b %}
+{% import 'src/components/gen/Date_9fb802599d6c4f258ff7845cf74f6b00.html.jinja2' as Date_9fb802599d6c4f258ff7845cf74f6b00 %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <div>
+        {{ Strong_74b4557f61744f8a994679ebf56ca07b.component(graph, depth + 1, object) }}
+        {{ Date_9fb802599d6c4f258ff7845cf74f6b00.component(graph, depth + 1, object) }}
+        
+    </div>
+{%- endmacro -%}

@@ -1,0 +1,9 @@
+{% import 'src/components/vo/IterativeContainer.html.jinja2' as IterativeContainer %}
+{% import 'src/components/gen/Dataset.html.jinja2' as Dataset %}
+
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#hasDataset' -%}
+    {% call(slotObj) IterativeContainer.component(graph, depth, object, predicate) %}
+        {{ Dataset.component(graph, depth, slotObj) }}
+    {% endcall %}
+{%- endmacro -%}

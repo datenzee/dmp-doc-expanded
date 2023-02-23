@@ -1,0 +1,5 @@
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'http://xmlns.com/foaf/0.1/mbox' -%}
+    {%- set emailFromPredicate = rdf_helpers.get_object_by(graph, object, predicate) -%}
+    <a href="mailto:{{ emailFromPredicate }}" >{{emailFromPredicate if emailFromPredicate}}</a>
+{%- endmacro -%}}

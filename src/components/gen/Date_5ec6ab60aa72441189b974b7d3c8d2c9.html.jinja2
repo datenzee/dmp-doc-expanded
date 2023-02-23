@@ -1,0 +1,2 @@
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#end' -%}{{ rdf_helpers.get_object_by(graph, object, predicate)|datetime_format("%d %b %Y") }}{%- endmacro -%}}

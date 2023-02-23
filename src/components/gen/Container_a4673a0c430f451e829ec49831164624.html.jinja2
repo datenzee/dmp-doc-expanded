@@ -1,0 +1,11 @@
+{% import 'src/components/gen/Strong_b90843dd8bff44a7903a34e8520ac750.html.jinja2' as Strong_b90843dd8bff44a7903a34e8520ac750 %}
+{% import 'src/components/gen/Content_ac627b27aaf846f289a4f167b95b5337.html.jinja2' as Content_ac627b27aaf846f289a4f167b95b5337 %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <div>
+        {{ Strong_b90843dd8bff44a7903a34e8520ac750.component(graph, depth + 1, object) }}
+        {{ Content_ac627b27aaf846f289a4f167b95b5337.component(graph, depth + 1, object) }}
+        
+    </div>
+{%- endmacro -%}

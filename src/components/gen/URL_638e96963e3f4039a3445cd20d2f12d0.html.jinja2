@@ -1,0 +1,5 @@
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'http://www.w3.org/ns/dcat#accessURL' -%}
+    {%- set linkFromPredicate = rdf_helpers.get_object_by(graph, object, predicate) -%}
+    <a href="{{ linkFromPredicate }}" target="_blank">{{ linkFromPredicate if linkFromPredicate }}</a>
+{%- endmacro -%}}

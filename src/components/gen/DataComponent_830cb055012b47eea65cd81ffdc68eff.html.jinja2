@@ -1,0 +1,9 @@
+{% import 'src/components/vo/IterativeContainer.html.jinja2' as IterativeContainer %}
+{% import 'src/components/gen/Contact.html.jinja2' as Contact %}
+
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#hasContact' -%}
+    {% call(slotObj) IterativeContainer.component(graph, depth, object, predicate) %}
+        {{ Contact.component(graph, depth, slotObj) }}
+    {% endcall %}
+{%- endmacro -%}

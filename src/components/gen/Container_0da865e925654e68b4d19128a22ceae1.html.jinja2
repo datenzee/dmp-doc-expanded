@@ -1,0 +1,17 @@
+{% import 'src/components/gen/Content_679b413e33704dceb9c233b0ceb502e6.html.jinja2' as Content_679b413e33704dceb9c233b0ceb502e6 %}
+{% import 'src/components/gen/Date_eb0f4905a6714e6096304d64abcdfc4e.html.jinja2' as Date_eb0f4905a6714e6096304d64abcdfc4e %}
+{% import 'src/components/gen/Content_3fb7aebe70e140eca4cad97159ad8698.html.jinja2' as Content_3fb7aebe70e140eca4cad97159ad8698 %}
+{% import 'src/components/gen/URL_a5d7ecc30ecb42bb91d601f44f64f27e.html.jinja2' as URL_a5d7ecc30ecb42bb91d601f44f64f27e %}
+{% import 'src/components/gen/Content_bc5b8b9c2ad14876bb6cb1b15d1a10df.html.jinja2' as Content_bc5b8b9c2ad14876bb6cb1b15d1a10df %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <div>
+        {{ Content_679b413e33704dceb9c233b0ceb502e6.component(graph, depth + 1, object) }}
+        {{ Date_eb0f4905a6714e6096304d64abcdfc4e.component(graph, depth + 1, object) }}
+        {{ Content_3fb7aebe70e140eca4cad97159ad8698.component(graph, depth + 1, object) }}
+        {{ URL_a5d7ecc30ecb42bb91d601f44f64f27e.component(graph, depth + 1, object) }}
+        {{ Content_bc5b8b9c2ad14876bb6cb1b15d1a10df.component(graph, depth + 1, object) }}
+        
+    </div>
+{%- endmacro -%}

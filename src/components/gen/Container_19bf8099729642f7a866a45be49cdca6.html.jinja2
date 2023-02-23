@@ -1,0 +1,9 @@
+{% import 'src/components/gen/Content_ee9958fdca0741db934535839772053e.html.jinja2' as Content_ee9958fdca0741db934535839772053e %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <div>
+        {{ Content_ee9958fdca0741db934535839772053e.component(graph, depth + 1, object) }}
+        
+    </div>
+{%- endmacro -%}

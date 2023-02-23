@@ -1,0 +1,19 @@
+{% import 'src/components/gen/Strong_b369bbac7a7d4ccfa1157df0e5215ea7.html.jinja2' as Strong_b369bbac7a7d4ccfa1157df0e5215ea7 %}
+{% import 'src/components/gen/Strong_eecd56e5eea94d9da5640eb62ecc4c42.html.jinja2' as Strong_eecd56e5eea94d9da5640eb62ecc4c42 %}
+{% import 'src/components/gen/Content_98491d0069124eeb9297cd502e7e1864.html.jinja2' as Content_98491d0069124eeb9297cd502e7e1864 %}
+{% import 'src/components/gen/Email_e4f226d9b08049e79662ffe984ce6b99.html.jinja2' as Email_e4f226d9b08049e79662ffe984ce6b99 %}
+{% import 'src/components/gen/Content_fe7f73db521b49f08b451a410c3dc4b3.html.jinja2' as Content_fe7f73db521b49f08b451a410c3dc4b3 %}
+{% import 'src/components/gen/Emphasis_cdeeec122ab546ff9789517e5a181aca.html.jinja2' as Emphasis_cdeeec122ab546ff9789517e5a181aca %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <div>
+        {{ Strong_b369bbac7a7d4ccfa1157df0e5215ea7.component(graph, depth + 1, object) }}
+        {{ Strong_eecd56e5eea94d9da5640eb62ecc4c42.component(graph, depth + 1, object) }}
+        {{ Content_98491d0069124eeb9297cd502e7e1864.component(graph, depth + 1, object) }}
+        {{ Email_e4f226d9b08049e79662ffe984ce6b99.component(graph, depth + 1, object) }}
+        {{ Content_fe7f73db521b49f08b451a410c3dc4b3.component(graph, depth + 1, object) }}
+        {{ Emphasis_cdeeec122ab546ff9789517e5a181aca.component(graph, depth + 1, object) }}
+        
+    </div>
+{%- endmacro -%}

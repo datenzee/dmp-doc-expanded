@@ -1,0 +1,25 @@
+{% import 'src/components/gen/Heading_21611d8183df4d7780be83ad39275339.html.jinja2' as Heading_21611d8183df4d7780be83ad39275339 %}
+{% import 'src/components/gen/Content_60e5a94bc7b34819b00024876fe0b5df.html.jinja2' as Content_60e5a94bc7b34819b00024876fe0b5df %}
+{% import 'src/components/gen/Container_a4673a0c430f451e829ec49831164624.html.jinja2' as Container_a4673a0c430f451e829ec49831164624 %}
+{% import 'src/components/gen/Container_4d3d470d6eb5465c8d7c32e9cbe700a9.html.jinja2' as Container_4d3d470d6eb5465c8d7c32e9cbe700a9 %}
+{% import 'src/components/gen/Container_4afdf25c6a034cc789fbaa2407d2364e.html.jinja2' as Container_4afdf25c6a034cc789fbaa2407d2364e %}
+{% import 'src/components/gen/Condition_1a4d81c212cc47d4a96f499a0a11529b.html.jinja2' as Condition_1a4d81c212cc47d4a96f499a0a11529b %}
+{% import 'src/components/gen/Condition_f4aaa97c9acc441ab489fc928e0961f0.html.jinja2' as Condition_f4aaa97c9acc441ab489fc928e0961f0 %}
+{% import 'src/components/gen/Container_fc4bd849b3aa4ad5b3e7e716852a9c9c.html.jinja2' as Container_fc4bd849b3aa4ad5b3e7e716852a9c9c %}
+{% import 'src/components/gen/Container_d99297ca526f470ba1741b63be2b79a7.html.jinja2' as Container_d99297ca526f470ba1741b63be2b79a7 %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <div>
+        {{ Heading_21611d8183df4d7780be83ad39275339.component(graph, depth + 1, object) }}
+        {{ Content_60e5a94bc7b34819b00024876fe0b5df.component(graph, depth + 1, object) }}
+        {{ Container_a4673a0c430f451e829ec49831164624.component(graph, depth + 1, object) }}
+        {{ Container_4d3d470d6eb5465c8d7c32e9cbe700a9.component(graph, depth + 1, object) }}
+        {{ Container_4afdf25c6a034cc789fbaa2407d2364e.component(graph, depth + 1, object) }}
+        {{ Condition_1a4d81c212cc47d4a96f499a0a11529b.component(graph, depth + 1, object) }}
+        {{ Condition_f4aaa97c9acc441ab489fc928e0961f0.component(graph, depth + 1, object) }}
+        {{ Container_fc4bd849b3aa4ad5b3e7e716852a9c9c.component(graph, depth + 1, object) }}
+        {{ Container_d99297ca526f470ba1741b63be2b79a7.component(graph, depth + 1, object) }}
+        
+    </div>
+{%- endmacro -%}

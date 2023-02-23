@@ -1,0 +1,10 @@
+{% import 'src/components/gen/Container_fa6510ef16284343bd891c58b7ad1f20.html.jinja2' as Container_fa6510ef16284343bd891c58b7ad1f20 %}
+
+{% import 'src/components/gen/Condition_ccf3d71d2a964163bf78e25ba93a3817.html.jinja2' as Condition_ccf3d71d2a964163bf78e25ba93a3817 %}
+
+
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#sensitiveData' -%}
+    {%- set value = 'yes' -%}
+    {%- if rdf_helpers.get_object_by(graph, object, predicate).value == value -%}{{ Container_fa6510ef16284343bd891c58b7ad1f20.component(graph, depth + 1, object) }}{%- else -%}{{ Condition_ccf3d71d2a964163bf78e25ba93a3817.component(graph, depth + 1, object) }}{%- endif -%}
+{%- endmacro -%}

@@ -1,0 +1,10 @@
+{% import 'src/components/gen/Container_19bf8099729642f7a866a45be49cdca6.html.jinja2' as Container_19bf8099729642f7a866a45be49cdca6 %}
+
+{% import 'src/components/gen/Condition_a58216c8ae944690944da0053f0c902d.html.jinja2' as Condition_a58216c8ae944690944da0053f0c902d %}
+
+
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#personalData' -%}
+    {%- set value = 'yes' -%}
+    {%- if rdf_helpers.get_object_by(graph, object, predicate).value == value -%}{{ Container_19bf8099729642f7a866a45be49cdca6.component(graph, depth + 1, object) }}{%- else -%}{{ Condition_a58216c8ae944690944da0053f0c902d.component(graph, depth + 1, object) }}{%- endif -%}
+{%- endmacro -%}

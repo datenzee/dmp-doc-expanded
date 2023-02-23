@@ -1,0 +1,9 @@
+{% import 'src/components/vo/IterativeContainer.html.jinja2' as IterativeContainer %}
+{% import 'src/components/gen/Distribution.html.jinja2' as Distribution %}
+
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#hasDistribution' -%}
+    {% call(slotObj) IterativeContainer.component(graph, depth, object, predicate) %}
+        {{ Distribution.component(graph, depth, slotObj) }}
+    {% endcall %}
+{%- endmacro -%}

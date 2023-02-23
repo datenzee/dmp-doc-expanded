@@ -1,0 +1,8 @@
+{% import 'src/components/vo/Heading.html.jinja2' as Heading %}
+{% import 'src/components/gen/Content_b9137cf67b69410c902a0a6432df44c5.html.jinja2' as Content_b9137cf67b69410c902a0a6432df44c5 %}
+
+
+{%- macro component(graph, depth, object) -%}
+    {%- call Heading.component(depth) -%}{{ Content_b9137cf67b69410c902a0a6432df44c5.component(graph, depth + 1, object) }}{%- endcall -%}
+
+{%- endmacro -%}

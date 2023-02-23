@@ -1,0 +1,9 @@
+{% import 'src/components/gen/Content_d5578791229b4639b74cf62c21c505ed.html.jinja2' as Content_d5578791229b4639b74cf62c21c505ed %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <strong>
+        {{ Content_d5578791229b4639b74cf62c21c505ed.component(graph, depth + 1, object) }}
+        
+    </strong>
+{%- endmacro -%}

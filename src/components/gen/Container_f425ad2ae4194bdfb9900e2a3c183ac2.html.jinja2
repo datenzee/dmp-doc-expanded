@@ -1,0 +1,23 @@
+{% import 'src/components/gen/Content_cc8ab42c377a43deaf5d081645d20b73.html.jinja2' as Content_cc8ab42c377a43deaf5d081645d20b73 %}
+{% import 'src/components/gen/Container_c14c0084a8eb4f8aa4fcf87f449e0586.html.jinja2' as Container_c14c0084a8eb4f8aa4fcf87f449e0586 %}
+{% import 'src/components/gen/Container_707a904048df413682fc001bf564b02a.html.jinja2' as Container_707a904048df413682fc001bf564b02a %}
+{% import 'src/components/gen/Container_008ff9dfe1a14e3b9d9961ae2db3a376.html.jinja2' as Container_008ff9dfe1a14e3b9d9961ae2db3a376 %}
+{% import 'src/components/gen/Container_80bbeee0ace1467dbe9cb47b8f015b13.html.jinja2' as Container_80bbeee0ace1467dbe9cb47b8f015b13 %}
+{% import 'src/components/gen/Container_de4ce79f01fa489285f500abca77da47.html.jinja2' as Container_de4ce79f01fa489285f500abca77da47 %}
+{% import 'src/components/gen/Container_4d281b89d2894a68a95bc3ea37de7cf3.html.jinja2' as Container_4d281b89d2894a68a95bc3ea37de7cf3 %}
+{% import 'src/components/gen/DataComponent_3bad75b807de47758aa10723c7376654.html.jinja2' as DataComponent_3bad75b807de47758aa10723c7376654 %}
+
+
+{%- macro component(graph, depth, object) -%}
+    <div>
+        {{ Content_cc8ab42c377a43deaf5d081645d20b73.component(graph, depth + 1, object) }}
+        {{ Container_c14c0084a8eb4f8aa4fcf87f449e0586.component(graph, depth + 1, object) }}
+        {{ Container_707a904048df413682fc001bf564b02a.component(graph, depth + 1, object) }}
+        {{ Container_008ff9dfe1a14e3b9d9961ae2db3a376.component(graph, depth + 1, object) }}
+        {{ Container_80bbeee0ace1467dbe9cb47b8f015b13.component(graph, depth + 1, object) }}
+        {{ Container_de4ce79f01fa489285f500abca77da47.component(graph, depth + 1, object) }}
+        {{ Container_4d281b89d2894a68a95bc3ea37de7cf3.component(graph, depth + 1, object) }}
+        {{ DataComponent_3bad75b807de47758aa10723c7376654.component(graph, depth + 1, object) }}
+        
+    </div>
+{%- endmacro -%}

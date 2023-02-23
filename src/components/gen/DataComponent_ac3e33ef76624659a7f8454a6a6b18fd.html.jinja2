@@ -1,0 +1,9 @@
+{% import 'src/components/vo/IterativeContainer.html.jinja2' as IterativeContainer %}
+{% import 'src/components/gen/Contributor.html.jinja2' as Contributor %}
+
+{%- macro component(graph, depth, object) -%}
+    {%- set predicate = 'https://w3id.org/dcso/ns/core#hasContributor' -%}
+    {% call(slotObj) IterativeContainer.component(graph, depth, object, predicate) %}
+        {{ Contributor.component(graph, depth, slotObj) }}
+    {% endcall %}
+{%- endmacro -%}
